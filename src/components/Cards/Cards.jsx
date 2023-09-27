@@ -13,7 +13,7 @@ const Cards = ({ searchValue }) => {
     }, []);
 
     return (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-24 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-4 md:px-24 mb-12">
             {data
                 .filter((card) => {
                     if (value === "") {
