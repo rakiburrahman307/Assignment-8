@@ -17,24 +17,24 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
-    children:[
+    children: [
       {
         path: '/',
-        element:<Home></Home>
+        element: <Home></Home>
       },
       {
-        path:'/donation',
-        element:<Donation></Donation>,
-        loader: ()=> fetch('/data.json')
+        path: '/donation',
+        element: <Donation></Donation>,
+        loader: () => fetch('/data.json')
       },
       {
-        path:'/statistics',
-        element:<Statistics></Statistics>
+        path: '/statistics',
+        element: <Statistics></Statistics>
       },
       {
-        path:'/card/:id',
-        element:<CardDetails></CardDetails>,
-        loader: ()=> fetch('/data.json')
+        path: '/card/:id',
+        element: <CardDetails></CardDetails>,
+        loader: () => fetch('/data.json')
       }
 
     ]
@@ -43,6 +43,6 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-     <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </React.StrictMode>,
 )

@@ -4,16 +4,16 @@
 import Banner from "../Banner/Banner";
 
 
-const Home = ()=> {
+const Home = () => {
     return (
         <div>
-           <Banner></Banner>
+            <Banner></Banner>
         </div>
     );
 };
 
 Home.propTypes = {
-    
+
 };
 
 export default Home;
