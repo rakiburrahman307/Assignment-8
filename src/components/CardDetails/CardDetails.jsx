@@ -25,7 +25,7 @@ const CardDetails = () => {
         text_color_4;
       }
       const handleDonation=()=>{
-       saveCardInformation(id)
+       saveCardInformation(parseInt(id))
          toast("Donation Successful");
       }
 
