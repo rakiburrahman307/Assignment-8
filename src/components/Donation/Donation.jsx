@@ -1,5 +1,4 @@
 
-// import PropTypes from 'prop-types';
 
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
@@ -29,7 +28,7 @@ const Donation = () => {
                     allDonationCard.slice(0, displayAllDonationCard).map(card => <DonationCard key={card.id} card={card}></DonationCard>)
                 }
             </div>
-            <div className={displayAllDonationCard >= allDonationCard.length? 'hidden' : 'w-32 mx-auto'}>
+            <div className={displayAllDonationCard >= allDonationCard.length ? 'hidden' : 'w-32 mx-auto'}>
                 <button
                     onClick={() => handleShowAll("show")}
                     className="btn btn-primary">Show All</button>
@@ -38,8 +37,6 @@ const Donation = () => {
     );
 };
 
-Donation.propTypes = {
 
-};
 
 export default Donation;

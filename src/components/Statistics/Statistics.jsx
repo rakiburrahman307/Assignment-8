@@ -8,7 +8,7 @@ const totalDonationLength = totalDonationCard.length;
 const percentage = ((totalDonationLength / 12) * 100);
 const totalCard = 100 - percentage;
 const data = [
-    { name: "Total Donation Percentage", value: percentage },
+    { name: "Donation Percentage", value: percentage },
     { name: "Total Remaining", value: totalCard },
 
 ];
