@@ -20,8 +20,6 @@ const Donation = () => {
     const handleShowAll = (show) => {
         if (show === "show") {
             setdisplayAllDonationCard(allDonationCard.length);
-        } else {
-            setdisplayAllDonationCard(4);
         }
     }
     return (
@@ -31,15 +29,10 @@ const Donation = () => {
                     allDonationCard.slice(0, displayAllDonationCard).map(card => <DonationCard key={card.id} card={card}></DonationCard>)
                 }
             </div>
-            <div className={displayAllDonationCard === allDonationCard.length ? 'hidden' : 'w-32 mx-auto'}>
+            <div className={displayAllDonationCard >= allDonationCard.length? 'hidden' : 'w-32 mx-auto'}>
                 <button
                     onClick={() => handleShowAll("show")}
                     className="btn btn-primary">Show All</button>
-            </div>
-            <div className={displayAllDonationCard === 4 ? 'hidden' : 'mx-auto w-32'}>
-                <button
-                    onClick={() => handleShowAll("hide")}
-                    className="btn btn-primary text-center mx-auto">Hide</button>
             </div>
         </div>
     );

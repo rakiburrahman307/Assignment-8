@@ -6,13 +6,13 @@ import { getStoredCardInformation } from "../Utility/utility";
 const totalDonationCard = getStoredCardInformation();
 const totalDonationLength = totalDonationCard.length;
 const percentage = ((totalDonationLength / 12) * 100);
-const totalCard = 12 - totalDonationLength;
+const totalCard = 100 - percentage;
 const data = [
     { name: "Total Donation Percentage", value: percentage },
-    { name: "Total Remaining Card", value: totalCard },
+    { name: "Total Remaining", value: totalCard },
 
 ];
-const colors = ["green", "red"];
+const colors = ["red", "green"];
 
 
 export default function Statistics() {

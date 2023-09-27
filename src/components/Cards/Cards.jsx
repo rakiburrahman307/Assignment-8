@@ -11,7 +11,7 @@ const Cards = ({ searchValue }) => {
             .then(res => res.json())
             .then(data => setData(data))
     }, []);
-
+  
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-4 md:px-24 mb-12">
             {data
@@ -20,11 +20,12 @@ const Cards = ({ searchValue }) => {
                         return card;
                     } else if (card.category.toLowerCase().includes(value.toLowerCase())) {
                         return card;
-                    }
+                    } 
                 })
                 .map((card) => <Card key={card.id} card={card}></Card>)
             }
         </div>
+        
     );
 };
 
