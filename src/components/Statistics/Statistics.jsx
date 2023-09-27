@@ -1,16 +1,45 @@
 
-// import PropTypes from 'prop-types';
+import { PieChart, Pie, Tooltip,Legend,Cell } from "recharts";
+import { getStoredCardInformation } from "../Utility/utility";
 
-const Statistics = () => {
-    return (
-        <div>
-            <h2>Hi Im Statistics Page</h2>
-        </div>
-    );
-};
 
-Statistics.propTypes = {
+const totalDonationCard = getStoredCardInformation();
+const totalDonationLength = totalDonationCard.length;
+const percentage = ((totalDonationLength / 12) * 100);
+const totalCard =  12-totalDonationLength;
+const data = [
+  { name: "Total Donation Percentage", value: percentage },
+  { name: "Total Remaining Card", value: totalCard },
+
+];
+const colors = ["green", "red"];
+
+
+export default function Statistics() {
     
-};
-
-export default Statistics;
+  return (
+    
+    <div>
+        <h2 className="text-center font-bold text-2xl">After Reload The Current Value Is Adding</h2>
+        <PieChart className="mx-auto" width={450} height={400}>
+        
+        <Pie
+          dataKey="value"
+          isAnimationActive={false}
+          data={data}
+          cx={200}
+          cy={200}
+          outerRadius={80}
+          fill="green"
+          label
+        >
+          {data.map((entry, idx) => (
+            <Cell key={`cell-${idx}`} fill={colors[idx % colors.length]} />
+          ))}
+        </Pie>
+        <Legend onMouseEnter={data} onMouseLeave={data} />
+        <Tooltip />
+      </PieChart>
+    </div>
+  );
+}

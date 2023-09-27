@@ -5,14 +5,14 @@ import './Header.css'
 
 import { NavLink } from "react-router-dom";
 const navLi =<>
-      <li><NavLink to='/'>Home</NavLink></li>
-      <li><NavLink to="/donation">Donation</NavLink></li>
-      <li><NavLink to="statistics">Statistics</NavLink></li></>
+      <li><NavLink to='/' className="font-semibold">Home</NavLink></li>
+      <li><NavLink to="/donation" className="font-semibold">Donation</NavLink></li>
+      <li><NavLink to="statistics" className="font-semibold">Statistics</NavLink></li></>
 
 const Header = () => {
     return (
 
-          <div className="flex justify-between bg-base-100 mx-5 md:mx-36 mt-5 mb-10">
+          <div className="flex justify-between bg-base-100 mx-5 md:mx-36 mt-5 mb-5">
   <div className="">
     <img className="w-36" src="https://i.ibb.co/fCqghP6/Logo.png" alt="logo" />
   </div>
