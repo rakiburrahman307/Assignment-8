@@ -14,7 +14,7 @@ const Header = () => {
 
           <div className="flex justify-between bg-base-100 mx-5 md:mx-36 mt-5 mb-10">
   <div className="">
-    <img className="w-36" src="/public/image/Logo.png" alt="logo" />
+    <img className="w-36" src="https://i.ibb.co/fCqghP6/Logo.png" alt="logo" />
   </div>
   <div className="flex-none">
   <div className="dropdown dropdown-bottom dropdown-end flex md:hidden lg:hidden">
